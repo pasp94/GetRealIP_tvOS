@@ -9,9 +9,14 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      
+      SessionManager.shared.getTVInfo(success: { (info) in
+         print(info.query)
+      }, failure: { error in
+         print(error.localizedDescription)
+      })
+   }
 }
