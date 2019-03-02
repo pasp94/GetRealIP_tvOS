@@ -13,6 +13,7 @@
 		1B12B7F7221B7B2E004C7E2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B12B7F6221B7B2E004C7E2C /* MainViewController.swift */; };
 		1B12B7F9221B7D7C004C7E2C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B12B7F8221B7D7C004C7E2C /* SessionManager.swift */; };
 		1B12B7FB221B846E004C7E2C /* DeviceIPInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B12B7FA221B846E004C7E2C /* DeviceIPInfo.swift */; };
+		1B12B7FD222AAD39004C7E2C /* TableviewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B12B7FC222AAD39004C7E2C /* TableviewDataSourceDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1B12B7F6221B7B2E004C7E2C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1B12B7F8221B7D7C004C7E2C /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		1B12B7FA221B846E004C7E2C /* DeviceIPInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIPInfo.swift; sourceTree = "<group>"; };
+		1B12B7FC222AAD39004C7E2C /* TableviewDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableviewDataSourceDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				1B12B7EB221B7584004C7E2C /* Main.storyboard */,
 				1B12B7F8221B7D7C004C7E2C /* SessionManager.swift */,
 				1B12B7FA221B846E004C7E2C /* DeviceIPInfo.swift */,
+				1B12B7FC222AAD39004C7E2C /* TableviewDataSourceDelegate.swift */,
 				1B12B7F6221B7B2E004C7E2C /* MainViewController.swift */,
 				1B12B7EE221B7587004C7E2C /* Assets.xcassets */,
 				1B12B7F0221B7587004C7E2C /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B12B7E8221B7584004C7E2C /* AppDelegate.swift in Sources */,
+				1B12B7FD222AAD39004C7E2C /* TableviewDataSourceDelegate.swift in Sources */,
 				1B12B7F7221B7B2E004C7E2C /* MainViewController.swift in Sources */,
 				1B12B7FB221B846E004C7E2C /* DeviceIPInfo.swift in Sources */,
 				1B12B7F9221B7D7C004C7E2C /* SessionManager.swift in Sources */,

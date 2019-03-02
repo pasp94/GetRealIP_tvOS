@@ -8,21 +8,40 @@
 
 import Foundation
 
-struct DeviceIPInfo: Decodable {
-   //let AS: String // "AS3269 Telecom Italia S.p.a.",
+typealias Codable = Encodable & Decodable
+
+struct DeviceIPInfo: Codable {
+   let provider : String // "AS3269 Telecom Italia S.p.a.",
    let city: String // "San Giuseppe Vesuviano",
    let country: String // "Italy",
    let countryCode: String //": "IT",
    let isp: String //": "INTERBUSINESS",
-   let lat: Double //": 40.8356,
-   let lon: Double //": 14.5049,
+   let latitude: Double //": 40.8356,
+   let longitude: Double //": 14.5049,
    let org: String//": "NAS DHCP Pool Padova",
-   let query: String //query": "79.43.152.153",
-   let region: String //"region": "72",
+   let ipAddress: String //query": "79.43.152.153",
+   let regionNumber: String //"region": "72",
    let regionName: String //": "Campania",
    let status: String //": "success",
    let timezone: String//": "Europe/Rome",
    let zip: String//": "80047"
+   
+   private enum CodingKeys : String, CodingKey {
+      case provider = "as"
+      case city
+      case country
+      case countryCode
+      case isp
+      case latitude = "lat"
+      case longitude = "lon"
+      case org
+      case ipAddress = "query"
+      case regionNumber = "region"
+      case regionName
+      case status
+      case timezone
+      case zip
+   }
 }
 
 /*

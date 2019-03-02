@@ -10,11 +10,18 @@ import UIKit
 
 class MainViewController: UIViewController {
    
+   @IBOutlet weak var logoImageView: UIImageView!
+   @IBOutlet weak var getIpButton: UIButton!
+   
    override func viewDidLoad() {
       super.viewDidLoad()
-      
+   }
+   
+   
+   @IBAction func getIpButtonPressed(_ sender: UIButton) {
       SessionManager.shared.getTVInfo(success: { (info) in
-         print(info.query)
+         print(info.provider)
+         print(info.ipAddress)
       }, failure: { error in
          print(error.localizedDescription)
       })
