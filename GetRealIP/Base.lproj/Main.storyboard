@@ -72,6 +72,10 @@
                                     <action selector="getIpButtonPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ZHb-KX-6KS"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGm-mF-fuq">
+                                <rect key="frame" x="902" y="68" width="908" height="573"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
@@ -81,6 +85,7 @@
                         <outlet property="customDataSource" destination="kkz-YR-2ZY" id="X6e-vS-Ltf"/>
                         <outlet property="getIpButton" destination="2fn-8D-1hR" id="l8f-By-FPp"/>
                         <outlet property="logoImageView" destination="oot-oR-CWG" id="PL2-Rg-tHc"/>
+                        <outlet property="map" destination="ZGm-mF-fuq" id="uJO-Vq-JwP"/>
                     </connections>
                 </viewController>
             </objects>
