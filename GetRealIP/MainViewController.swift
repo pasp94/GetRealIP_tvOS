@@ -13,15 +13,26 @@ class MainViewController: UIViewController {
    @IBOutlet weak var logoImageView: UIImageView!
    @IBOutlet weak var getIpButton: UIButton!
    
+   @IBOutlet weak var basicInfoTableView: UITableView!
+   @IBOutlet var customDataSource: TableviewDataSourceDelegate!
+   
+   private let indicator = ActivityIndicator.shared
+   
    override func viewDidLoad() {
       super.viewDidLoad()
    }
    
    
    @IBAction func getIpButtonPressed(_ sender: UIButton) {
+      
+//      self.indicator.show()
+      
       SessionManager.shared.getTVInfo(success: { (info) in
-         print(info.provider)
-         print(info.ipAddress)
+         DispatchQueue.main.async {
+            self.customDataSource.setTableInfo(info: info.dictionaryInfo)
+            self.basicInfoTableView.reloadData()
+//            self.indicator.remove()
+         }
       }, failure: { error in
          print(error.localizedDescription)
       })

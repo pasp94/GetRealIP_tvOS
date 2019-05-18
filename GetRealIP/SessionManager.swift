@@ -19,7 +19,7 @@ class SessionManager: NSObject {
    public func getTVInfo(success: @escaping (DeviceIPInfo)->(), failure: @escaping (Error) -> ()) {
       guard let ipApiURL = URL(string: ipApiURLString) else { return }
       
-      let task = URLSession.shared.dataTask(with: ipApiURL) { responseData, responseURL, responseError in
+      _ = URLSession.shared.dataTask(with: ipApiURL) { responseData, responseURL, responseError in
          if let error = responseError {
             failure(error)
          } else {

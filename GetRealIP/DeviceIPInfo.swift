@@ -42,6 +42,14 @@ struct DeviceIPInfo: Codable {
       case timezone
       case zip
    }
+   
+   var dictionaryInfo: [String: Any] {
+      return ["ipAddress": ipAddress,
+              "provider": provider,
+              "city": city,
+              "zip": zip,
+              "status": status]
+   }
 }
 
 /*
