@@ -18,11 +18,17 @@ class MainViewController: UIViewController {
    @IBOutlet weak var basicInfoTableView: UITableView!
    @IBOutlet var customDataSource: TableviewDataSourceDelegate!
    @IBOutlet weak var map: MKMapView!
-   
-   private let indicator = ActivityIndicator.shared
+   @IBOutlet var positionLabels: [UILabel]!
    
    override func viewDidLoad() {
       super.viewDidLoad()
+   }
+   
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      for label in positionLabels {
+         label.text = ""
+      }
    }
    
    private func setPinOnMap(lat: Double, lon: Double) {
@@ -38,22 +44,34 @@ class MainViewController: UIViewController {
       map.addAnnotation(annotation)
    }
    
-   @IBAction func getIpButtonPressed(_ sender: UIButton) {
+   private func setPositionLabels(_ info: DeviceIPInfo) {
+      self.positionLabels[0].text = info.city
+      self.positionLabels[1].text = "\(info.regionName), \(info.country)"
+   }
+   
+   private func showPopup(_ error: Error) {
+      let alertViewController = UIAlertController(title: "Info", message: error.localizedDescription, preferredStyle: .alert)
+      let okAction = UIAlertAction(title: "Chiudi", style: .cancel, handler: nil)
+      alertViewController.addAction(okAction)
       
-//      self.indicator.show()
+      self.present(alertViewController, animated: true)
+   }
+   
+   @IBAction func getIpButtonPressed(_ sender: UIButton) {
+//      ActivityIndicator.shared.show()
       
       SessionManager.shared.getTVInfo(success: { (info) in
          DispatchQueue.main.async {
             self.customDataSource.setTableInfo(info: info.dictionaryInfo)
             self.basicInfoTableView.reloadData()
+            self.setPositionLabels(info)
             
             self.setPinOnMap(lat: info.latitude, lon: info.longitude)
             
-            
-//            self.indicator.remove()
+//            ActivityIndicator.shared.remove()
          }
       }, failure: { error in
-         print(error.localizedDescription)
+         self.showPopup(error)
       })
    }
 }

@@ -40,7 +40,7 @@ class ActivityIndicator {
    
    public func remove() {
       if isShowing {
-         self.application.keyWindow?.willRemoveSubview(self.view)
+         self.view.removeFromSuperview()
          self.application.endIgnoringInteractionEvents()
          self.isShowing = false
       }
