@@ -19,9 +19,12 @@ class MainViewController: UIViewController {
    @IBOutlet var customDataSource: TableviewDataSourceDelegate!
    @IBOutlet weak var map: MKMapView!
    @IBOutlet var positionLabels: [UILabel]!
+    
+    private var mapFocusGuide: UIFocusGuide!
    
    override func viewDidLoad() {
       super.viewDidLoad()
+        self.setFocusGuide()
    }
    
    override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +51,15 @@ class MainViewController: UIViewController {
       self.positionLabels[0].text = info.city
       self.positionLabels[1].text = "\(info.regionName), \(info.country)"
    }
+    
+    private func setFocusGuide() {
+        self.mapFocusGuide = UIFocusGuide()
+        self.view.addLayoutGuide(self.mapFocusGuide)
+        mapFocusGuide.rightAnchor.constraint(equalTo: map.leftAnchor).isActive = true
+        mapFocusGuide.leftAnchor.constraint(equalTo: basicInfoTableView.rightAnchor).isActive = true
+        mapFocusGuide.bottomAnchor.constraint(equalTo: basicInfoTableView.bottomAnchor).isActive = true
+        mapFocusGuide.topAnchor.constraint(equalTo: map.topAnchor).isActive = true
+    }
    
    private func showPopup(_ error: Error) {
       let alertViewController = UIAlertController(title: "Info", message: error.localizedDescription, preferredStyle: .alert)

@@ -78,7 +78,7 @@
                                     <action selector="getIpButtonPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ZHb-KX-6KS"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGm-mF-fuq">
+                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGm-mF-fuq">
                                 <rect key="frame" x="834" y="126" width="976" height="573"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="573" id="2K9-ug-S3U"/>
