@@ -53,9 +53,30 @@ class TableviewDataSourceDelegate: NSObject, UITableViewDataSource, UITableViewD
    
    public func setTableInfo(info: [String: Any]) {
       self.cellData.removeAll()
+    self.cellData = Array<MainInfo>(repeating: MainInfo(key: "", value: ""), count: info.count)
+    
       for (key, value) in info {
-         let data = MainInfo(key: key, value: value as! String)
-         self.cellData.append(data)
+        switch key {
+        case "ipAddress":
+            self.cellData[0] = MainInfo(key: key, value: value as! String)
+            break
+        case "provider":
+            self.cellData[1] = MainInfo(key: key, value: value as! String)
+            break
+        case "city":
+            self.cellData[2] = MainInfo(key: key, value: value as! String)
+            break
+        case "zip":
+            self.cellData[3] = MainInfo(key: key, value: value as! String)
+            break
+        case "status":
+            self.cellData[4] = MainInfo(key: key, value: value as! String)
+            break
+        default:
+            self.cellData.append(MainInfo(key: key, value: value as! String))
+            break
+        }
+        
       }
    }
 }
