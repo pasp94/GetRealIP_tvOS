@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="appleTV" orientation="landscape">
-        <adaptation id="light"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="15702" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" appearance="light"/>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,28 +29,25 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="tpT-Y9-7Xs">
-                                <rect key="frame" x="110" y="514" width="635" height="471"/>
+                                <rect key="frame" x="106" y="534" width="674" height="478"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="471" id="BxP-3d-F2O"/>
-                                </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="n7v-Ql-SyB" detailTextLabel="MPO-D2-70T" style="IBUITableViewCellStyleValue1" id="y2t-zB-tc1">
-                                        <rect key="frame" x="0.0" y="66" width="635" height="66"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="n7v-Ql-SyB" detailTextLabel="MPO-D2-70T" style="IBUITableViewCellStyleValue1" id="y2t-zB-tc1">
+                                        <rect key="frame" x="0.0" y="66" width="674" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y2t-zB-tc1" id="8WO-VN-Lmp">
-                                            <rect key="frame" x="0.0" y="0.0" width="635" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="674" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n7v-Ql-SyB">
-                                                    <rect key="frame" x="20" y="10" width="72" height="46"/>
+                                                    <rect key="frame" x="20" y="10" width="71" height="46"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MPO-D2-70T">
-                                                    <rect key="frame" x="519" y="10" width="96" height="46"/>
+                                                    <rect key="frame" x="560" y="10" width="94" height="46"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                                     <nil key="textColor"/>
@@ -68,9 +63,9 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fn-8D-1hR">
-                                <rect key="frame" x="330" y="379" width="195" height="66"/>
+                                <rect key="frame" x="227" y="379" width="401" height="86"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="195" id="0sq-tG-3k7"/>
+                                    <constraint firstAttribute="width" constant="401" id="x9N-JJ-bKs"/>
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Get IP!"/>
@@ -103,16 +98,16 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oot-oR-CWG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="12X-CK-Yai"/>
+                            <constraint firstItem="tpT-Y9-7Xs" firstAttribute="top" secondItem="2fn-8D-1hR" secondAttribute="bottom" constant="69" id="6XS-c1-fXT"/>
+                            <constraint firstItem="2fn-8D-1hR" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="137" id="B1Y-0n-d1z"/>
                             <constraint firstItem="ZGm-mF-fuq" firstAttribute="leading" secondItem="oot-oR-CWG" secondAttribute="trailing" constant="206" id="DVO-l7-khY"/>
-                            <constraint firstItem="tpT-Y9-7Xs" firstAttribute="top" secondItem="2fn-8D-1hR" secondAttribute="bottom" constant="69" id="EcS-MF-m2b"/>
+                            <constraint firstItem="ZGm-mF-fuq" firstAttribute="leading" secondItem="tpT-Y9-7Xs" secondAttribute="trailing" constant="54" id="IBQ-0D-HHi"/>
                             <constraint firstItem="oot-oR-CWG" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="137" id="NEq-qY-3lx"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tpT-Y9-7Xs" secondAttribute="bottom" constant="35" id="U47-Ms-toD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tpT-Y9-7Xs" secondAttribute="bottom" constant="8" symbolic="YES" id="VBp-h6-Oof"/>
                             <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="ZGm-mF-fuq" secondAttribute="trailing" constant="20" id="VDi-k6-f9c"/>
                             <constraint firstItem="ZGm-mF-fuq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="VLl-rN-MRD"/>
-                            <constraint firstItem="tpT-Y9-7Xs" firstAttribute="centerX" secondItem="2fn-8D-1hR" secondAttribute="centerX" id="b09-cY-4f0"/>
-                            <constraint firstItem="2fn-8D-1hR" firstAttribute="top" secondItem="oot-oR-CWG" secondAttribute="bottom" constant="69" id="i4a-H6-Wtm"/>
-                            <constraint firstItem="tpT-Y9-7Xs" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="20" id="pAi-hb-Dou"/>
-                            <constraint firstItem="ZGm-mF-fuq" firstAttribute="leading" secondItem="tpT-Y9-7Xs" secondAttribute="trailing" constant="89" id="tJz-aW-HCq"/>
+                            <constraint firstItem="2fn-8D-1hR" firstAttribute="top" secondItem="oot-oR-CWG" secondAttribute="bottom" constant="69" id="lpr-y3-5Ds"/>
+                            <constraint firstItem="tpT-Y9-7Xs" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="16" id="rvo-wb-bVX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
@@ -127,6 +122,7 @@
                     </connections>
                 </viewController>
             </objects>
+            <point key="canvasLocation" x="51" y="65"/>
         </scene>
     </scenes>
     <resources>

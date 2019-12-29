@@ -51,22 +51,3 @@ struct DeviceIPInfo: Codable {
               "status": status]
    }
 }
-
-/*
- 
- "as": "AS3269 Telecom Italia S.p.a.",
- "city": "San Giuseppe Vesuviano",
- "country": "Italy",
- "countryCode": "IT",
- "isp": "INTERBUSINESS",
- "lat": 40.8356,
- "lon": 14.5049,
- "org": "NAS DHCP Pool Padova",
- "query": "79.43.152.153",
- "region": "72",
- "regionName": "Campania",
- "status": "success",
- "timezone": "Europe/Rome",
- "zip": "80047"
- 
- */
